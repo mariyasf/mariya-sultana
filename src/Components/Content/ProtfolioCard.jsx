@@ -5,9 +5,10 @@ const ProtfolioCard = ({ proj }) => {
     const { image, live_link, title, github_link, categories } = proj;
     return (
         <div>
-            <div className="col-lg-4 col-md-6 portfolio-item web-des">
+            <div className="col-lg-4 col-md-6 portfolio-item web-des
+             rounded-lg shadow-xl">
                 <div className="portfolio-wrap">
-                    <figure>
+                    <figure >
                         <img src={image} alt="" />
 
                         <a href={live_link}

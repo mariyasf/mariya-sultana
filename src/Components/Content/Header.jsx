@@ -36,11 +36,13 @@ const Header = () => {
 
             <div className="large-btn">
                 <div className="content-inner">
-                    <a className="btn" href="#">
+                    <a className="btn" href="/Mariya-Sultana.pdf" download >
                         <FaDownload />
                         Resume
                     </a>
-                    <a className="btn" href="#">
+                    <a className="btn"
+                        target="_blank"
+                        href="https://www.linkedin.com/in/mariyasf/">
                         <FaHandsHelping />
                         Hire Me</a>
                 </div>

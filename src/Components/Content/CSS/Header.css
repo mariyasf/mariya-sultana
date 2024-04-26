@@ -3,12 +3,6 @@
     background: #ffffff;
 }
 
-/* .header .content-inner {
-    padding: 100px 30px;
-    background: url("../../../assets/images/profile.png") right bottom no-repeat;
-    background-size:cover;
-} */
-
 .header span {
     color: #FF6F61;
     font-size: 22px;
@@ -29,7 +23,6 @@
     font-size: 25px;
     color: #FF6F61;
 }
-
 
 .header .typed-cursor {
     font-size: 25px;
@@ -74,10 +67,6 @@
     background: rgba(255, 255, 255, .1);
 }
 
-
-/**********************************/
-/******* Content Header CSS *******/
-/**********************************/
 .content-header {
     position: relative;
     width: 100%;

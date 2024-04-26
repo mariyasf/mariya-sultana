@@ -5,9 +5,9 @@ import {
     IconButton,
 } from "@material-tailwind/react";
 import React from "react";
-import { FaFileArchive, FaRegAddressCard, FaUserGraduate } from "react-icons/fa";
+import { FaFacebook, FaFileArchive, FaGithub, FaLinkedin, FaRegAddressCard, FaUserGraduate } from "react-icons/fa";
 import { IoHomeOutline } from "react-icons/io5";
-import { MdOutlineEmail } from "react-icons/md";
+import { MdMiscellaneousServices, MdOutlineEmail } from "react-icons/md";
 import './navbar.css'
 import { FcGraduationCap } from "react-icons/fc";
 
@@ -23,7 +23,7 @@ const NavBar = () => {
 
     const navList = (
         <ul
-            className="mt-2 mb-4 flex flex-col gap-2 ">
+            className=" mt-2 mb-4 flex flex-col gap-2 ">
             <Typography
                 as="li"
                 variant="small"
@@ -47,6 +47,19 @@ const NavBar = () => {
                     <FaUserGraduate />
                 </a>
             </Typography>
+
+            <Typography
+                as="li"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal nav-item"
+            >
+                <a className="nav-link flex items-center justify-between" href="#activities">
+                    <span>Activities</span>
+                    <MdMiscellaneousServices />
+                </a>
+            </Typography>
+
             <Typography
                 as="li"
                 variant="small"
@@ -58,6 +71,9 @@ const NavBar = () => {
                     <FaFileArchive />
                 </a>
             </Typography>
+
+
+
             <Typography
                 as="li"
                 variant="small"
@@ -75,17 +91,21 @@ const NavBar = () => {
 
     return (
         <div className="bg-[#222222]">
-
-            <Navbar className="sticky top-0 z-10  
-            max-w-full maxh-[1200px] rounded-none px-10 py-2
-            lg:px-8 lg:py-4 bg-[#222222]">
+            <Navbar className="fixed lg:sticky 
+            top-0 z-10 w-full rounded-none px-10 py-2
+            lg:px-8 lg:py-4  bg-[#222222]">
+                <div className="hidden lg:block">
+                    <img
+                        className="w-full"
+                        src="/images/profile.png" alt="Profile" />
+                </div>
 
                 <div className="flex lg:block items-center justify-between">
                     <Typography
                         as="a"
                         href="#"
                         className="mr-4 cursor-pointer
-                         py-1.5 lg:hidden 
+                         py-1.5 lg:hidden
                         font-medium font-poppins text-xl"
                     >
                         MSF
@@ -134,12 +154,16 @@ const NavBar = () => {
                                     </svg>
                                 )}
                         </IconButton>
+
+
                     </div>
                 </div>
 
                 <MobileNav open={openNav}>
                     {navList}
                 </MobileNav>
+
+
             </Navbar>
 
         </div>

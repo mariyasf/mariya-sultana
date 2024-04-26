@@ -1,19 +1,26 @@
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <div className="footer font-poppins">
-            <div className="content-inner">
-                <div className="row align-items-center">
-                    <div className="col-md-6">
-                        <p>&copy; Copyright <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
-                    </div>
-                    
-                    <div className="col-md-6">
-                        <p>Powered by <a href="https://htmlcodex.com">HTML Codex</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <footer className="footer items-center p-4 
+            mb-4 rounded-xl bg-[#F6D155]">
+            <aside className="items-center text-[#FF6F61] text-xl font-bold grid-flow-col">
+                <p>Mariya Sultana</p>
+            </aside>
+
+            <nav className="grid-flow-col gap-4 md:place-self-center 
+            md:justify-self-end text-xl">
+
+
+                <a href="https://github.com/mariyasf">
+                    <FaGithub />
+                </a>
+                <a href="https://www.linkedin.com/in/mariyasf/">
+                    <FaLinkedin />
+                </a>
+            </nav>
+        </footer>
     );
 };
 

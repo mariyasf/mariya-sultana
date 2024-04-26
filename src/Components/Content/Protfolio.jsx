@@ -21,19 +21,9 @@ const Protfolio = () => {
                     <h2>Portfolio</h2>
                 </div>
 
-                <div className="row">
-                    <div className="col-lg-12">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*"
-                                className="filter-active">All</li>
-                            <li data-filter=".web-des">Design</li>
-                            <li data-filter=".web-dev">Development</li>
-                            <li data-filter=".dig-mar">Marketing</li>
-                        </ul>
-                    </div>
-                </div>
+              
 
-                <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 portfolio-container">
+                <div className="grid grid-cols-1   lg:grid-cols-3 gap-4 portfolio-container">
                     {
                         project.map(proj =>
                             <ProtfolioCard
