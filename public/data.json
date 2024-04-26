@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "image": "images/a.png",
+        "live_link": "https://mariyasf.github.io/new-year-new-me/",
+        "title": "New Year New Me",
+        "github_link": "https://github.com/mariyasf/new-year-new-me",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 2,
+        "image": "images/b.png",
+        "live_link": "https://mariyasf.github.io/online-flower-shop/",
+        "title": "Online Flower Shop",
+        "github_link": "https://github.com/mariyasf/online-flower-shop",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 3,
+        "image": "images/c.png",
+        "live_link": "https://mariyasf.github.io/new-year-new-mission/",
+        "title": "New Year New Mission",
+        "github_link": "https://github.com/mariyasf/new-year-new-mission",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 4,
+        "image": "images/d.png",
+        "live_link": "https://mariyasf.github.io/tea-house/",
+        "title": "Tea House",
+        "github_link": "https://github.com/mariyasf/tea-house",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 5,
+        "image": "images/e.png",
+        "live_link": "https://mariyasf.github.io/portfolio/",
+        "title": "portfolio",
+        "github_link": "https://github.com/mariyasf/portfolio",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 6,
+        "image": "images/f.png",
+        "live_link": "https://mariyasf.github.io/g3-architects/",
+        "title": "G3 Architects",
+        "github_link": "https://github.com/mariyasf/g3-architects",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 7,
+        "image": "images/g.png",
+        "live_link": "https://mariyasf.github.io/influencer-gears/",
+        "title": "Influencer Gears",
+        "github_link": "https://github.com/mariyasf/influencer-gears",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 8,
+        "image": "images/h.png",
+        "live_link": "https://mariyasf.github.io/Vhromon_Joy_Jatra/",
+        "title": "Vhromon Joy Jatra",
+        "github_link": "https://github.com/mariyasf/Vhromon_Joy_Jatra",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 9,
+        "image": "images/i.png",
+        "live_link": "https://mariyasf.github.io/Hockeys/",
+        "title": "Hockeys",
+        "github_link": "https://github.com/mariyasf/Hockeys",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 10,
+        "image": "images/j.png",
+        "live_link": "https://mariyasf.github.io/geometry-genius-js/",
+        "title": "Geometry Genius with js",
+        "github_link": "https://github.com/mariyasf/geometry-genius-js",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 11,
+        "image": "images/k.png",
+        "live_link": "https://mariyasf.github.io/smart-ticketing/",
+        "title": "Smart Ticketing",
+        "github_link": "https://github.com/mariyasf/smart-ticketing",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 12,
+        "image": "images/l.png",
+        "live_link": "https://mariyasf.github.io/alphabet-clash/",
+        "title": "Alpha Clash",
+        "github_link": "https://github.com/mariyasf/alphabet-clash",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 13,
+        "image": "images/m.png",
+        "live_link": "https://calories-2200.surge.sh/",
+        "title": "Recipe Calories",
+        "github_link": "",
+        "categories": "HTML, CSS"
+    },
+    {
+        "id": 14,
+        "image": "images/n.png",
+        "live_link": "https://book-vibe.surge.sh/",
+        "title": "Book Vibe with Local Storage",
+        "github_link": "",
+        "categories": "Store in the Local Storage"
+    },
+    {
+        "id": 15,
+        "image": "images/o.png",
+        "live_link": "https://habitat-hospitality.web.app/",
+        "title": "Habitat",
+        "github_link": "",
+        "categories": "Athetication with Firebase"
+    }
+]
