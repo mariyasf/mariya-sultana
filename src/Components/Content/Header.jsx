@@ -4,7 +4,10 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 const Header = () => {
     const [typed_text] = useTypewriter({
-        words: ['Frontend Developer.', 'Competitive Programmer.'],
+        words: [
+            'Web Developer...',
+            'Competitive Programmer...'
+        ],
         loop: {},
         typeSpeed: 120,
         deleteSpeed: 80,
@@ -26,9 +29,8 @@ const Header = () => {
 
                     </div>
                     <div>
-                        As a passionate student at IIUC, I wear multiple hats, serving as a Teaching Assistant and Competitive Programming Bootcamp Trainer. In my role as a mentor and trainer, I'm trying to guide aspiring programmers on their path to mastering competitive programming, fostering an environment of learning and growth.
-
-                        Together, we embark on the exciting journey of solving complex problems, enhancing our coding skills, and building a vibrant community of problem solvers.
+                        As a versatile student at IIUC, I serve as a Teaching Assistant and Competitive Programming Bootcamp Trainer, nurturing aspiring programmers.
+                        Passionate about front-end development, particularly in React.js, I continually seek to expand my skills and contribute to the development community. Eager to bring this passion to a full-time role, I strive for excellence in every project.
                     </div>
                 </div>
 

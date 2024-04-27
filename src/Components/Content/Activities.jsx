@@ -27,9 +27,7 @@ const Activities = () => {
 
                             <h3>Frintend</h3>
                             <p>
-                                HTML and CSS | Basic Django and Flask | JavaScript
-                                React.js | Matarial UI
-
+                                HTML and CSS | JavaScript, React.js | Daisyui, Matarial UI  | Basic Django and Flask
                             </p>
                         </div>
                     </div>
@@ -39,7 +37,7 @@ const Activities = () => {
 
                             <h3>Backend</h3>
                             <p>
-                                SQLite | GitHub version control system | Data Structure and Algorithm
+                                SQLite | Firebase
                             </p>
                         </div>
                     </div>
@@ -72,7 +70,7 @@ const Activities = () => {
                                 <a href="https://codeforces.com/profile/Mariya_S.F.">
 
                                     Mariya_S.F.
-                                </a> | Max. pupil, 1244 | Contest participation: 170+ | Problem solved: 950+
+                                </a> | Max. pupil, 1274 | Contest participation: 170+ | Problem solved: 950+
                             </p>
                         </div>
                     </div>

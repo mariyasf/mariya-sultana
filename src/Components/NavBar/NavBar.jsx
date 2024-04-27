@@ -30,10 +30,14 @@ const NavBar = () => {
                 color="blue-gray"
                 className="p-1 font-normal nav-item "
             >
-                <a className="nav-link flex items-center justify-between" href="#header">
+
+                <a
+                    className="nav-link flex items-center justify-between"
+                    href="#header">
                     <span>Home</span>
-                    <IoHomeOutline />
+                    <IoHomeOutline className="text-xl" />
                 </a>
+
             </Typography>
 
             <Typography
@@ -44,7 +48,7 @@ const NavBar = () => {
             >
                 <a className="nav-link flex items-center justify-between" href="#education">
                     <span>Education</span>
-                    <FaUserGraduate />
+                    <FaUserGraduate className="text-xl" />
                 </a>
             </Typography>
 
@@ -56,7 +60,7 @@ const NavBar = () => {
             >
                 <a className="nav-link flex items-center justify-between" href="#activities">
                     <span>Activities</span>
-                    <MdMiscellaneousServices />
+                    <MdMiscellaneousServices className="text-xl" />
                 </a>
             </Typography>
 
@@ -68,7 +72,7 @@ const NavBar = () => {
             >
                 <a className="nav-link flex items-center justify-between" href="#portfolio">
                     <span>Portfolio</span>
-                    <FaFileArchive />
+                    <FaFileArchive className="text-xl" />
                 </a>
             </Typography>
 
@@ -82,7 +86,7 @@ const NavBar = () => {
             >
                 <a className="nav-link flex items-center justify-between" href="#contact">
                     <span>Contact</span>
-                    <MdOutlineEmail />
+                    <MdOutlineEmail className="text-xl" />
                 </a>
             </Typography>
         </ul>
