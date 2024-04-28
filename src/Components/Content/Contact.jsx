@@ -5,6 +5,7 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { IoCall } from 'react-icons/io5';
 
 const Contact = () => {
+    
     return (
         <div className="contact" id="contact">
             <div className="content-inner">
@@ -47,16 +48,18 @@ const Contact = () => {
                     <div className="flex-1">
                         <h2 className='text-2xl font-bold pb-5 text-[#FF6F61]'>Contact Me</h2>
                         <div className="form">
-                            <form>
+                            <form action="https://getform.io/f/pbmqgjvb" method="POST">
                                 <div className="form-row">
                                     <div className="form-group col-md-6">
                                         <input type="text"
+                                            name='name'
                                             className="form-control"
                                             placeholder="Your Name" />
                                     </div>
 
                                     <div className="form-group col-md-6">
                                         <input type="email"
+                                            name='email'
                                             className="form-control"
                                             placeholder="Your Email" />
                                     </div>
@@ -64,12 +67,13 @@ const Contact = () => {
 
                                 <div className="form-group">
                                     <input type="text"
+                                        name='subject'
                                         className="form-control"
                                         placeholder="Subject" />
                                 </div>
                                 <div className="form-group">
                                     <textarea className="form-control"
-                                        rows="5"
+                                        rows="5" name='message'
                                         placeholder="Message"></textarea>
                                 </div>
                                 <div>
