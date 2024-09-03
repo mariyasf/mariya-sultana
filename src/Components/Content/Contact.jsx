@@ -23,7 +23,7 @@ const Contact = () => {
                             </p>
                             <p className='flex items-center gap-4'>
                                 <IoCall />
-                                <span>+880+01717638616 </span>
+                                <span>+880 1717638616 </span>
 
                             </p>
                             <p className='flex items-center gap-4'>
