@@ -3,10 +3,10 @@
   width: 100%;
 }
 
-/* Hero / Banner - Reference: dark purple, gradient right, faint glows */
+/* Hero / Banner - 60% left, 30% blend, 10% right */
 .hero-section {
   position: relative;
-  background: linear-gradient(120deg, #1a1a2e 0%, #2d1b69 50%, #3b2568 100%);
+  background: linear-gradient(to right, #14001b 0%, #14001b 60%, #4f0a56 90%, #4f0a56 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -15,26 +15,28 @@
   padding-top: 70px;
 }
 
+/* Speckled texture overlay - faint */
 .hero-section::before {
   content: "";
   position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 60%;
-  height: 80%;
-  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.15) 0%, transparent 60%);
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
   pointer-events: none;
+  z-index: 1;
+  opacity: 0.8;
 }
 
 .hero-section::after {
   content: "";
   position: absolute;
-  bottom: -10%;
-  left: -5%;
-  width: 40%;
-  height: 50%;
-  background: radial-gradient(ellipse, rgba(219, 39, 119, 0.08) 0%, transparent 60%);
+  top: -10%;
+  right: -5%;
+  width: 50%;
+  height: 70%;
+  background: radial-gradient(ellipse, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-content {

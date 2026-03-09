@@ -1,5 +1,6 @@
 import Footer from "../Footer/Footer";
 import Activities from "./Activities";
+import AboutMe from "./AboutMe";
 import Contact from "./Contact";
 import Education from "./Education";
 import Header from "./Header";
@@ -10,6 +11,7 @@ const Content = () => {
     return (
         <div className="font-poppins">
             <Header />
+            <AboutMe />
             <Education />
             <Activities />
             <Protfolio />
