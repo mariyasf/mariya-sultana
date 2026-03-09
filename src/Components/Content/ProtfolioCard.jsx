@@ -1,41 +1,54 @@
-import { FaEye, FaLink } from 'react-icons/fa';
-import './CSS/protfolio.css';
+import { FaEye, FaLink, FaGithub } from "react-icons/fa";
+import "./CSS/protfolio.css";
+import "./CSS/animations.css";
 
 const ProtfolioCard = ({ proj }) => {
-    const { image, live_link, title, github_link, categories } = proj;
-    return (
-        <div>
-            <div className="col-lg-4 col-md-6 portfolio-item web-des
-             rounded-lg shadow-xl">
-                <div className="portfolio-wrap">
-                    <figure >
-                        <img src={image} alt="" />
+  const { image, live_link, title, github_link, categories } = proj;
 
-                        <a href={live_link}
-                            data-lightbox="portfolio"
-                            data-title="Project Name"
-                            className="link-preview text-center items-center"
-                            title="Preview"
-                            target="_blank"
-                        >
-                            <span><FaEye /></span>
-                        </a>
-
-                        <a href={github_link}
-                            className="link-details"
-                            target="_blank"
-                            title="More Details">
-                            <FaLink />
-                        </a>
-
-                        <a className="portfolio-title" href="#">{title}
-                            {categories && <span>{categories}</span>}
-                        </a>
-                    </figure>
-                </div>
-            </div>
+  return (
+    <div className="portfolio-card hover-lift">
+      <div className="card-image-container">
+        <img src={image} alt={title} className="card-image" />
+        <div className="card-overlay">
+          <div className="card-actions">
+            <a
+              href={live_link}
+              className="action-btn preview-btn btn-hover-slide"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Live Preview"
+            >
+              <FaEye />
+              <span>Preview</span>
+            </a>
+            <a
+              href={github_link}
+              className="action-btn github-btn btn-hover-slide"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="View Code"
+            >
+              <FaGithub />
+              <span>Code</span>
+            </a>
+          </div>
         </div>
-    );
+      </div>
+
+      <div className="card-content">
+        <h3 className="card-title">{title}</h3>
+        {categories && (
+          <div className="card-categories">
+            {categories.split(",").map((category, index) => (
+              <span key={index} className="category-tag">
+                {category.trim()}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default ProtfolioCard;

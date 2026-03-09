@@ -3,21 +3,20 @@ import NavBar from "../Components/NavBar/NavBar";
 import Content from "../Components/Content/Content";
 
 const Root = () => {
-    return (
-        <div>
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navigation Bar - Fixed Position */}
+      <NavBar />
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 
-            gap-10 lg:w-[1140px] lg:mx-auto">
+      {/* Main Content Area */}
+      <main className="w-full">
+        <Content />
+      </main>
 
-                <NavBar />
-
-                <div className="col-span-2 lg:mt-5">
-                    <Content />
-                </div>
-            </div>
-            
-        </div>
-    );
+      {/* Footer - Full Width */}
+      <Footer />
+    </div>
+  );
 };
 
 export default Root;

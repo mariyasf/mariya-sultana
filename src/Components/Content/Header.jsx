@@ -1,56 +1,75 @@
-import { FaDownload, FaHandsHelping } from 'react-icons/fa';
-import './CSS/Header.css'
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import React from "react";
+import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import "./CSS/Header.css";
+import "./CSS/animations.css";
 
 const Header = () => {
-    const [typed_text] = useTypewriter({
-        words: [
-            'Web Developer...',
-            'Competitive Programmer...'
-        ],
-        loop: {},
-        typeSpeed: 120,
-        deleteSpeed: 80,
-    });
+  return (
+    <div className="header-container">
+      <div className="hero-section" id="header">
+        <div className="hero-content">
+          <div className="hero-text animate-fadeInLeft">
+            <p className="hero-greeting">WELCOME TO MY WORLD ✨</p>
+            <h1 className="hero-name">
+              <span className="hero-name-big">Hi</span>
+              <span className="hero-name-small">, I'm Mariya Sultana</span>
+            </h1>
+            <h2 className="hero-title">
+              <span className="title-magenta">Software</span> Engineer
+            </h2>
+            <p className="hero-subtitle">mPair Technologies Ltd.</p>
+            <p className="hero-description">
+              I build end-to-end SaaS products — designing intuitive frontends,
+              developing robust backends with GraphQL & REST APIs, and managing
+              servers and CI/CD for smooth deployment and performance.
+            </p>
+          </div>
 
-    return (
-        <div>
-            <div className="header font-poppins" id="header">
-                <div className="content-inner p-12">
-                    <p>I'm</p>
-                    <h1>Mariya Sultana</h1>
-                    <div className="typed_text mb-5">
-                        <h2>
-                            {
-                                typed_text
-                            }
-                            <Cursor className="typed-cursor" />
-                        </h2>
-
-                    </div>
-                    <div>
-                        As a versatile student at IIUC, I serve as a Teaching Assistant and Competitive Programming Bootcamp Trainer, nurturing aspiring programmers.
-                        Passionate about front-end development, particularly in React.js, I continually seek to expand my skills and contribute to the development community. Eager to bring this passion to a full-time role, I strive for excellence in every project.
-                    </div>
-                </div>
-
+          <div className="hero-actions animate-fadeInRight">
+            <div className="hero-buttons">
+              <a className="btn-hero btn-my-projects" href="#portfolio">
+                My Projects
+              </a>
+              <a
+                className="btn-hero btn-download-cv"
+                href="/Mariya-Sultana.pdf"
+                download
+              >
+                Download CV
+              </a>
             </div>
-
-            <div className="large-btn">
-                <div className="content-inner">
-                    <a className="btn" href="/Mariya-Sultana.pdf" download >
-                        <FaDownload />
-                        Resume
-                    </a>
-                    <a className="btn"
-                        target="_blank"
-                        href="https://www.linkedin.com/in/mariyasf/">
-                        <FaHandsHelping />
-                        Hire Me</a>
-                </div>
+            <div className="social-links">
+              <a href="#" className="social-icon" aria-label="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="#" className="social-icon" aria-label="LinkedIn">
+                <FaLinkedin />
+              </a>
+              <a href="#" className="social-icon" aria-label="X">
+                <FaXTwitter />
+              </a>
+              <a href="#" className="social-icon" aria-label="Facebook">
+                <FaFacebook />
+              </a>
             </div>
+          </div>
         </div>
-    );
+        {/* <div className="hero-image-container animate-fadeInRight">
+          <img
+            src="/images/hero-illustration.png"
+            alt="Mariya Sultana"
+            className="hero-image"
+          />
+        </div> */}
+        <a href="#education" className="scroll-indicator" aria-label="Scroll down">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 5v14M19 12l-7 7-7-7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  );
 };
 
 export default Header;
