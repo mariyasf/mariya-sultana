@@ -13,11 +13,15 @@ html {
 
 body {
   color: #2d3436;
-  background: #ffffff;
+  background: #14001b;
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+}
+
+.root-wrap {
+  background: #14001b;
 }
 
 /* Modern color scheme */
@@ -48,6 +52,38 @@ a:focus {
 
 .btn:focus {
   box-shadow: none;
+}
+
+/* Focus visible – keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+[class*="btn"]:focus-visible,
+.nav-link:focus-visible,
+.filter-btn:focus-visible,
+.action-btn:focus-visible,
+.contact-btn:focus-visible,
+.back-to-top:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #802487;
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline-offset: 0;
+}
+
+/* Scroll reveal – section fade-in */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Smooth scrolling */

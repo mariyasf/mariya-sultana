@@ -33,7 +33,7 @@ const educationList = [
 
 const Education = () => {
   return (
-    <section className="education" id="education">
+    <section className="education scroll-reveal" id="education">
       <div className="education-bg" />
       <div className="education-glow education-glow--purple" />
 

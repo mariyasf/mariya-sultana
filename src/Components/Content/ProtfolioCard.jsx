@@ -8,7 +8,7 @@ const ProtfolioCard = ({ proj }) => {
   return (
     <div className="portfolio-card hover-lift">
       <div className="card-image-container">
-        <img src={image} alt={title} className="card-image" />
+        <img src={image} alt={title} className="card-image" loading="lazy" width="350" height="250" />
         <div className="card-overlay">
           <div className="card-actions">
             <a

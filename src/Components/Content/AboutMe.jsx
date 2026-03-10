@@ -65,7 +65,7 @@ const AboutMe = () => {
         );
 
     return (
-        <section className="about-me" id="about-me">
+        <section className="about-me scroll-reveal" id="about-me">
             {/* Dark bg + decorative blurs (reference style) */}
             <div className="about-me-bg" />
             <div className="about-me-glow about-me-glow--purple" />

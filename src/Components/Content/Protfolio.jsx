@@ -25,7 +25,7 @@ const Protfolio = () => {
         );
 
   return (
-    <div className="portfolio-section" id="portfolio">
+    <div className="portfolio-section scroll-reveal" id="portfolio">
       <div className="portfolio-container">
         <div className="portfolio-header animate-fadeInUp">
           <h2>My Portfolio</h2>

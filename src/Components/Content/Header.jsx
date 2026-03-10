@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import "./CSS/Header.css";
 import "./CSS/animations.css";
@@ -40,17 +40,17 @@ const Header = () => {
               </a>
             </div>
             <div className="social-links">
-              <a href="#" className="social-icon" aria-label="Instagram">
-                <FaInstagram />
+              <a href="https://github.com/mariyasf" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
+                <FaGithub />
               </a>
-              <a href="#" className="social-icon" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/mariyasf/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
                 <FaLinkedin />
               </a>
-              <a href="#" className="social-icon" aria-label="X">
-                <FaXTwitter />
-              </a>
-              <a href="#" className="social-icon" aria-label="Facebook">
+              <a href="https://www.facebook.com/maruuyaa36/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
                 <FaFacebook />
+              </a>
+              <a href="https://twitter.com/mariyasf" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="X (Twitter)">
+                <FaXTwitter />
               </a>
             </div>
           </div>

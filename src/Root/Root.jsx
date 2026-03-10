@@ -3,7 +3,7 @@ import Content from "../Components/Content/Content";
 
 const Root = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen root-wrap">
       {/* Navigation Bar - Fixed Position */}
       <NavBar />
 
