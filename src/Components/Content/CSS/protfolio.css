@@ -393,13 +393,48 @@
 }
 
 @media (max-width: 480px) {
+  .portfolio-section {
+    padding: 50px 0 70px;
+  }
+
+  .portfolio-container {
+    padding: 0 0.75rem;
+  }
+
   .portfolio-header h2 {
-    font-size: 2rem;
+    font-size: 1.85rem;
+  }
+
+  .portfolio-header p {
+    font-size: 0.9rem;
+  }
+
+  .filter-buttons {
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.75rem;
+    min-height: 44px;
   }
 
   .portfolio-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
+  }
+
+  .card-image-container {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
   }
 
   .card-actions {
@@ -409,6 +444,7 @@
 
   .action-btn {
     padding: 0.6rem 1rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    min-height: 44px;
   }
 }

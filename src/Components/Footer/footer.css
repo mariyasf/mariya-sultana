@@ -1,0 +1,67 @@
+/* Footer – single bar, dark theme, purple accent */
+
+.footer {
+  background: #14001b;
+  border-top: 1px solid rgba(128, 36, 135, 0.3);
+  padding: 1.25rem 1.5rem;
+  margin-top: 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #a746a8;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .footer-name {
+    font-size: 1rem;
+  }
+
+  .footer-nav a {
+    font-size: 1.25rem;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

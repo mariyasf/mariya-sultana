@@ -7,11 +7,17 @@
 /**********************************/
 /********** General CSS ***********/
 /**********************************/
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: #2d3436;
   background: #ffffff;
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Modern color scheme */

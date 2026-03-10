@@ -104,6 +104,47 @@
   }
 }
 
+@media (max-width: 480px) {
+  .education {
+    padding: 50px 0 70px;
+  }
+
+  .education-inner {
+    padding: 0 1rem;
+  }
+
+  .education-header h2 {
+    font-size: 2rem;
+  }
+
+  .education-header__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .edu-card {
+    padding-left: 44px;
+  }
+
+  .edu-card__node {
+    left: 14px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .edu-card__content {
+    padding: 1.2rem 1rem;
+  }
+
+  .edu-card__degree {
+    font-size: 1.2rem;
+  }
+
+  .edu-card__institution,
+  .edu-card__place {
+    font-size: 0.9rem;
+  }
+}
+
 /* Timeline container */
 .education-timeline {
   position: relative;

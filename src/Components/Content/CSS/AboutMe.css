@@ -2,10 +2,16 @@
 
 .about-me {
   position: relative;
-  padding: 80px 24px 120px;
+  padding: 60px 1rem 80px;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .about-me {
+    padding: 80px 24px 120px;
+  }
 }
 
 /* Dark background */
@@ -159,7 +165,7 @@
 }
 
 .about-me-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
   margin: 0 0 1rem 0;
@@ -208,37 +214,67 @@
 }
 
 .about-me-text {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Skills / Tech & Tools – category rows with devicon icons */
+/* Skills / Tech & Tools – card layout, grid */
 .about-me-skills {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem 1rem 0.75rem;
+  background: rgba(24, 2, 30, 0.6);
+  border-radius: 16px;
 }
 
 .about-skills-label {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   letter-spacing: 1px;
-  margin: 0 0 1.25rem 0;
-  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
-.tech-category {
-  margin-bottom: 1.25rem;
+.tech-categories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
 }
 
-.tech-category:last-child {
-  margin-bottom: 0;
+@media (min-width: 600px) {
+  .tech-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .tech-categories-grid {
+    gap: 1rem;
+  }
+}
+
+.tech-category-card {
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  transition: background 0.25s ease;
+}
+
+.tech-category-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tech-category-card .tech-cat-title {
+  margin-bottom: 0.4rem;
 }
 
 .tech-cat-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
   margin: 0 0 0.5rem 0;
-  color: rgba(255, 255, 255, 0.75);
+  color: #a746a8;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
 }
@@ -255,25 +291,29 @@
   height: 36px;
   object-fit: contain;
   transition: transform 0.2s ease;
+  padding: 4px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .tech-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
+  background: rgba(128, 36, 135, 0.2);
 }
 
 .tech-text-badge {
   display: inline-block;
   padding: 6px 12px;
-  border: 1px solid rgba(167, 139, 250, 0.6);
-  border-radius: 6px;
+  border: 1px solid rgba(167, 139, 250, 0.5);
+  border-radius: 8px;
   font-size: 0.85rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  background: rgba(139, 92, 246, 0.12);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(128, 36, 135, 0.2);
   font-family: "Poppins", sans-serif;
 }
 
-.tech-hosting .tech-cat-title {
+.tech-category-card.tech-hosting .tech-cat-title {
   margin-bottom: 0.25rem;
 }
 
@@ -281,4 +321,57 @@
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .about-me-title {
+    font-size: 2.25rem;
+  }
+
+  .about-me-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .about-me-intro,
+  .about-me-text {
+    font-size: 0.95rem;
+  }
+
+  .about-hex-wrap {
+    width: 240px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me {
+    padding: 50px 0.75rem 60px;
+  }
+
+  .about-me-title {
+    font-size: 1.75rem;
+  }
+
+  .about-me-skills {
+    padding: 0.6rem 0.85rem 0.85rem 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .about-hex-wrap {
+    width: 220px;
+    height: 260px;
+  }
+
+  .tech-category-card {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .tech-icons {
+    gap: 6px 10px;
+  }
+
+  .tech-icon {
+    width: 32px;
+    height: 32px;
+  }
 }

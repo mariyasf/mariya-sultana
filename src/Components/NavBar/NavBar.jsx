@@ -10,7 +10,7 @@ const NavBar = () => {
   React.useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
+      () => window.innerWidth >= 769 && setOpenNav(false),
     );
   }, []);
 
@@ -43,6 +43,7 @@ const NavBar = () => {
 
   const handleNavClick = (id) => {
     setActiveLink(id);
+    setOpenNav(false);
     scrollLockRef.current = Date.now() + 700;
   };
 
@@ -83,6 +84,16 @@ const NavBar = () => {
       </div>
 
       <div className="mobile-nav">
+        {openNav && (
+          <div
+            className="mobile-menu-overlay"
+            onClick={() => setOpenNav(false)}
+            onKeyDown={(e) => e.key === "Escape" && setOpenNav(false)}
+            role="button"
+            tabIndex={0}
+            aria-label="Close menu"
+          />
+        )}
         <div className="mobile-header">
           <a href="#header" className="navbar-brand-mobile">
             <span className="logo-circle">M</span>
@@ -92,6 +103,7 @@ const NavBar = () => {
             className="mobile-menu-toggle"
             ripple={false}
             onClick={() => setOpenNav(!openNav)}
+            aria-label={openNav ? "Close menu" : "Open menu"}
           >
             {openNav ? (
               <svg

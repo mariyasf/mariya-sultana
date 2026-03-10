@@ -121,29 +121,31 @@ const AboutMe = () => {
 
                     <div className="about-me-skills">
                         <h3 className="about-skills-label">🛠 Tech & Tools</h3>
-                        <div className="tech-category">
-                            <h4 className="tech-cat-title">Languages</h4>
-                            <div className="tech-icons">{renderTechRow(tech.languages)}</div>
-                        </div>
-                        <div className="tech-category">
-                            <h4 className="tech-cat-title">Frontend</h4>
-                            <div className="tech-icons">{renderTechRow(tech.frontend)}</div>
-                        </div>
-                        <div className="tech-category">
-                            <h4 className="tech-cat-title">Backend & API</h4>
-                            <div className="tech-icons">{renderTechRow(tech.backend)}</div>
-                        </div>
-                        <div className="tech-category">
-                            <h4 className="tech-cat-title">Databases</h4>
-                            <div className="tech-icons">{renderTechRow(tech.databases)}</div>
-                        </div>
-                        <div className="tech-category">
-                            <h4 className="tech-cat-title">DevOps & server</h4>
-                            <div className="tech-icons">{renderTechRow(tech.devops)}</div>
-                        </div>
-                        <div className="tech-category tech-hosting">
-                            <h4 className="tech-cat-title">Hosting</h4>
-                            <span className="tech-host-text">ExonHost KVM</span>
+                        <div className="tech-categories-grid">
+                            <div className="tech-category-card">
+                                <h4 className="tech-cat-title">Languages</h4>
+                                <div className="tech-icons">{renderTechRow(tech.languages)}</div>
+                            </div>
+                            <div className="tech-category-card">
+                                <h4 className="tech-cat-title">Frontend</h4>
+                                <div className="tech-icons">{renderTechRow(tech.frontend)}</div>
+                            </div>
+                            <div className="tech-category-card">
+                                <h4 className="tech-cat-title">Backend & API</h4>
+                                <div className="tech-icons">{renderTechRow(tech.backend)}</div>
+                            </div>
+                            <div className="tech-category-card">
+                                <h4 className="tech-cat-title">Databases</h4>
+                                <div className="tech-icons">{renderTechRow(tech.databases)}</div>
+                            </div>
+                            <div className="tech-category-card">
+                                <h4 className="tech-cat-title">DevOps & Server</h4>
+                                <div className="tech-icons">{renderTechRow(tech.devops)}</div>
+                            </div>
+                            <div className="tech-category-card tech-hosting">
+                                <h4 className="tech-cat-title">Hosting</h4>
+                                <span className="tech-host-text">ExonHost KVM</span>
+                            </div>
                         </div>
                     </div>
                 </div>
