@@ -18,7 +18,7 @@ const NavBar = () => {
     const sections = [
       { id: "home", el: document.getElementById("header") },
       { id: "about", el: document.getElementById("about-me") },
-      { id: "services", el: document.getElementById("activities") },
+      { id: "education", el: document.getElementById("education") },
       { id: "projects", el: document.getElementById("portfolio") },
       { id: "contact", el: document.getElementById("contact") },
     ].filter((s) => s.el);
@@ -49,9 +49,8 @@ const NavBar = () => {
   const navLinks = [
     { id: "home", label: "Home", href: "#header" },
     { id: "about", label: "About Me", href: "#about-me" },
-    { id: "services", label: "Services", href: "#activities" },
+    { id: "education", label: "Education", href: "#education" },
     { id: "projects", label: "My Projects", href: "#portfolio" },
-    { id: "reviews", label: "Reviews", href: "#portfolio" },
     { id: "contact", label: "Contact", href: "#contact" },
   ];
 

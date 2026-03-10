@@ -1,0 +1,47 @@
+/* Activities / Services – same gradient bg as Education: left #290a2f, middle #401646, right #200626 */
+
+.activities-section {
+  position: relative;
+  padding: 80px 24px 120px;
+  overflow: hidden;
+  background: linear-gradient(to right, #290a2f 0%, #401646 40%, #200626 100%);
+}
+
+.activities-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.activities-section .content-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.activities-section .content-header h2 {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.activities-section .content-header::after {
+  background: #f97316;
+}
+
+.activities-section h3,
+.activities-section p,
+.activities-section a {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins", sans-serif;
+}
+
+.activities-section a:hover {
+  color: #f97316;
+}

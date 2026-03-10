@@ -1,64 +1,289 @@
+/* Education – vertical timeline, bg matches About (#14001b) */
+
 .education {
-    position: relative;
-    padding: 60px 30px;
-    background: #ffffff;
-    /* border-bottom: 30px solid #F6D155; */
+  position: relative;
+  padding: 80px 0 100px;
+  overflow: hidden;
+  background: #14001b;
 }
 
-.education .edu-col {
-    position: relative;
-    width: 100%;
-    padding: 20px 0 20px 20px;
-    border-left: 1px solid #FF6F61;
-    border-bottom: 1px solid #FF6F61;
+.education-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* .education .col-md-6:first-child .edu-col {
-    padding-top: 0;
+.education-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.8;
 }
 
-.education .col-md-6:last-child .edu-col {
-    border-bottom: none;
-    padding-bottom: 0;
-} */
+.education-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.education-glow--purple {
+  width: 450px;
+  height: 450px;
+  background: rgba(128, 36, 135, 0.5);
+  top: 20%;
+  right: -10%;
+}
+
+.education-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
 
 @media (min-width: 768px) {
-    .education .col-md-6:nth-child(-n+2) .edu-col {
-        padding-top: 0;
-    }
-
-    
+  .education-inner {
+    padding: 0 2rem;
+  }
 }
 
-.education .edu-col span {
-    position: relative;
-    display: block;
-    font-size: 13px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+/* Header – same design as Portfolio: title, purple underline, subtitle */
+.education-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
 }
 
-.education .edu-col span::before {
-    position: absolute;
-    content: "";
-    width: 11px;
-    height: 11px;
-    background: #FF6F61;
-    top: 5px;
-    left: -26px;
-    border-radius: 5px;
+.education-header h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  display: inline-block;
 }
 
-.education .edu-col span i {
-    color: #FF6F61;
+.education-header h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #733177, #bd59bb);
+  border-radius: 2px;
 }
 
-.education .edu-col h3 {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
+.education-header__subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 600px;
+  margin: 1.25rem auto 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.education .edu-col p {
-    margin: 0;
+@media (min-width: 768px) {
+  .education-header h2 {
+    font-size: 3rem;
+  }
+
+  .education-header__subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Timeline container */
+.education-timeline {
+  position: relative;
+  padding: 0 0 2rem;
+}
+
+/* Central vertical line */
+.education-timeline__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(128, 36, 135, 0.4) 5%,
+    rgba(128, 36, 135, 0.95) 20%,
+    rgba(128, 36, 135, 0.95) 80%,
+    rgba(128, 36, 135, 0.4) 95%,
+    transparent 100%
+  );
+  box-shadow: 0 0 20px rgba(128, 36, 135, 0.6);
+}
+
+@media (max-width: 767px) {
+  .education-timeline__line {
+    left: 24px;
+  }
+}
+
+/* Card – base + alternating sides */
+.edu-card {
+  position: relative;
+  width: calc(50% - 32px);
+  margin-bottom: 3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.edu-card:last-child {
+  margin-bottom: 0;
+}
+
+.edu-card--left {
+  margin-right: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.edu-card--right {
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .edu-card--left {
+    padding-right: 56px;
+  }
+
+  .edu-card--right {
+    padding-left: 56px;
+  }
+}
+
+@media (max-width: 767px) {
+  .edu-card {
+    width: 100%;
+    padding-left: 52px;
+    padding-right: 0;
+    text-align: left;
+  }
+}
+
+/* Glowing node on timeline – pinkish-purple */
+.edu-card__node {
+  position: absolute;
+  top: 28px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bd59bb, #802487);
+  box-shadow: 0 0 14px rgba(189, 89, 187, 0.9), 0 0 28px rgba(128, 36, 135, 0.6);
+  z-index: 2;
+}
+
+.edu-card--left .edu-card__node {
+  right: -24px;
+  left: auto;
+}
+
+.edu-card--right .edu-card__node {
+  left: -24px;
+  right: auto;
+}
+
+@media (max-width: 767px) {
+  .edu-card__node {
+    left: 16px;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
+/* Card content box – translucent dark purple, glowing border, left-aligned */
+.edu-card__content {
+  background: rgba(28, 8, 38, 0.88);
+  border: 1px solid rgba(128, 36, 135, 0.45);
+  border-radius: 14px;
+  padding: 1.4rem 1.35rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 20px rgba(128, 36, 135, 0.12);
+  text-align: left;
+}
+
+.edu-card__content:hover {
+  border-color: rgba(128, 36, 135, 0.65);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4), 0 0 28px rgba(128, 36, 135, 0.25);
+}
+
+/* Title row: icon + degree – icon left, degree right */
+.edu-card__title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.45rem;
+}
+
+.edu-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  color: #a746a8;
+  font-size: 1.2rem;
+}
+
+.edu-card__degree {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.edu-card__period {
+  display: block;
+  font-size: 0.9rem;
+  color: #a746a8;
+  margin-bottom: 0.6rem;
+}
+
+/* Thin horizontal separator – light purple */
+.edu-card__separator {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(196, 181, 253, 0.5), rgba(196, 181, 253, 0.2));
+  margin: 0 0 0.65rem 0;
+}
+
+.edu-card__institution {
+  font-size: 0.98rem;
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0 0 0.2rem 0;
+}
+
+.edu-card__institution-line2 {
+  font-size: 0.9rem;
+  color: #c4b5fd;
+  line-height: 1.45;
+  margin: 0 0 0.4rem 0;
+}
+
+.edu-card__place {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  line-height: 1.45;
 }

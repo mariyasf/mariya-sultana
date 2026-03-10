@@ -51,13 +51,14 @@
 
 
 .form .btn {
-    color: #222222;
-    background: #FF6F61;
+    color: #ffffff;
+    background: #802487;
     border-radius: 0;
     transition: all .3s;
 }
 
 .form .btn:hover {
-    color: #FF6F61;
-    background: #222222;
+    color: #802487;
+    background: #ffffff;
+    border: 1px solid #802487;
 }

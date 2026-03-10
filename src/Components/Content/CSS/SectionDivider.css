@@ -1,0 +1,52 @@
+/* Section divider – glowing purple line between sections, optional "See All" button */
+
+.section-divider {
+  background: #17001d;
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.section-divider__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(90deg, #6a1e6e 0%, #802487 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(128, 36, 135, 0.35);
+}
+
+.section-divider__btn:hover {
+  background: linear-gradient(90deg, #802487 0%, #9a2d91 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(128, 36, 135, 0.45);
+}
+
+.section-divider__arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.section-divider__line {
+  width: 100%;
+  max-width: 900px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(128, 36, 135, 0.3) 15%,
+    rgba(128, 36, 135, 0.9) 50%,
+    rgba(128, 36, 135, 0.3) 85%,
+    transparent 100%
+  );
+  box-shadow: 0 0 12px rgba(128, 36, 135, 0.5),
+    0 0 24px rgba(128, 36, 135, 0.25);
+}

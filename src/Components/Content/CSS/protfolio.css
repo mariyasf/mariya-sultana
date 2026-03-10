@@ -141,10 +141,10 @@
   top: 50%;
 }
 
-/* Modern Portfolio Section Styles */
+/* Modern Portfolio Section – Dark Purple theme */
 .portfolio-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: #17001d;
   position: relative;
 }
 
@@ -162,7 +162,7 @@
 .portfolio-header h2 {
   font-size: 3rem;
   font-weight: 700;
-  color: #2d3436;
+  color: #ffffff;
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
@@ -176,13 +176,14 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, #733177, #bd59bb);
   border-radius: 2px;
 }
 
 .portfolio-header p {
-  font-size: 1.2rem;
-  color: #636e72;
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.75);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -198,9 +199,9 @@
 
 .filter-btn {
   padding: 0.8rem 1.5rem;
-  border: 2px solid #e9ecef;
-  background: #ffffff;
-  color: #636e72;
+  border: 2px solid rgba(128, 36, 135, 0.6);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -211,18 +212,19 @@
 }
 
 .filter-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #802487;
+  color: #ffffff;
+  background: rgba(128, 36, 135, 0.25);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 0 20px rgba(128, 36, 135, 0.35);
 }
 
 .filter-btn.active {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: #802487;
   color: #ffffff;
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 0 25px rgba(128, 36, 135, 0.45);
 }
 
 /* Portfolio Grid */
@@ -233,25 +235,28 @@
   margin-bottom: 2rem;
 }
 
-/* Portfolio Card */
+/* Portfolio Card – default: #18021e & #733177 */
 .portfolio-card {
-  background: #ffffff;
-  border-radius: 16px;
+  background: linear-gradient(180deg, #18021e 0%, #1a0322 50%, #18021e 100%);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(115, 49, 119, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(115, 49, 119, 0.15);
   transition: all 0.3s ease;
   position: relative;
 }
 
 .portfolio-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  border-color: rgba(189, 89, 187, 0.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(189, 89, 187, 0.25);
 }
 
 .card-image-container {
   position: relative;
   height: 250px;
   overflow: hidden;
+  background: #18021e;
 }
 
 .card-image {
@@ -262,7 +267,7 @@
 }
 
 .portfolio-card:hover .card-image {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card-overlay {
@@ -271,11 +276,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(102, 126, 234, 0.9),
-    rgba(118, 75, 162, 0.9)
-  );
+  background: linear-gradient(135deg, rgba(189, 89, 187, 0.9), rgba(133, 43, 126, 0.9));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,32 +298,33 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 1.2rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(128, 36, 135, 0.4);
   color: #ffffff;
   text-decoration: none;
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 600;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   transition: all 0.3s ease;
 }
 
 .action-btn:hover {
-  background: #ffffff;
-  color: #667eea;
+  background: #802487;
+  color: #ffffff;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(128, 36, 135, 0.4);
 }
 
 .card-content {
   padding: 1.5rem;
+  background: linear-gradient(180deg, #18021e 0%, rgba(115, 49, 119, 0.12) 100%);
 }
 
 .card-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #2d3436;
+  color: #ffffff;
   margin-bottom: 1rem;
   line-height: 1.3;
 }
@@ -335,20 +337,21 @@
 
 .category-tag {
   display: inline-block;
-  padding: 0.3rem 0.8rem;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  padding: 0.35rem 0.9rem;
+  background: linear-gradient(135deg, #733177, #852b7e);
   color: #ffffff;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(115, 49, 119, 0.4);
 }
 
 .no-projects {
   text-align: center;
   padding: 3rem;
-  color: #636e72;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.1rem;
 }
 
@@ -367,7 +370,7 @@
   }
 
   .portfolio-header p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .filter-buttons {

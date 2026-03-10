@@ -102,6 +102,7 @@ const AboutMe = () => {
                 {/* Right: Heading + text + skills */}
                 <div className="about-me-content">
                     <h2 className="about-me-title">About me</h2>
+                    <p className="about-me-subtitle">Get to know me, my experience, and what I do</p>
 
                     <p className="about-me-intro">
                         I'm Mariya Sultana, a Software Engineer & Team Lead at mPair Technology Ltd.,

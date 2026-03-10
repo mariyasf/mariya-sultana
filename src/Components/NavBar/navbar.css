@@ -99,13 +99,13 @@
   box-shadow: 0 0 12px rgba(175, 71, 179, 0.5);
 }
 
-/* Contact button: brighter purple, pill, sparkle */
+/* Contact button: #802487 */
 .btn-contact-nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.6rem 1.35rem;
-  background: #9c35b3;
+  background: #802487;
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
@@ -134,9 +134,9 @@
 }
 
 .btn-contact-nav:hover {
-  background: #8a2d9e;
+  background: #6a1e6e;
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(156, 53, 179, 0.45);
+  box-shadow: 0 6px 24px rgba(128, 36, 135, 0.5);
 }
 
 /* Mobile */

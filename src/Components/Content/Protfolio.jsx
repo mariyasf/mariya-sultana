@@ -18,12 +18,14 @@ const Protfolio = () => {
   const filteredProjects =
     filter === "all"
       ? project
-      : project.filter((proj) =>
-          proj.categories?.toLowerCase().includes(filter.toLowerCase()),
+      : project.filter(
+          (proj) =>
+            proj.filterTags?.includes(filter) ||
+            proj.categories?.toLowerCase().includes(filter.toLowerCase()),
         );
 
   return (
-    <div className="portfolio-section scroll-reveal" id="portfolio">
+    <div className="portfolio-section" id="portfolio">
       <div className="portfolio-container">
         <div className="portfolio-header animate-fadeInUp">
           <h2>My Portfolio</h2>
