@@ -222,4 +222,9 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+
+    .portfolio-card {
+        opacity: 1 !important;
+        animation: none !important;
+    }
 }

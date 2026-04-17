@@ -1,26 +1,41 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./CSS/protfolio.css";
 import "./CSS/animations.css";
 import ProtfolioCard from "./ProtfolioCard";
+
+const hasTag = (proj, tag) =>
+  Array.isArray(proj.filterTags) && proj.filterTags.includes(tag);
 
 const Protfolio = () => {
   const [project, setProject] = useState([]);
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setProject(data);
-      });
+    fetch("/data.json", { cache: "no-store" })
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to load projects (${res.status})`);
+        return res.json();
+      })
+      .then((data) => setProject(Array.isArray(data) ? data : []))
+      .catch(() => setProject([]));
   }, []);
+
+  /** Client projects first so they stay visible without scrolling past 18+ cards */
+  const orderedProjects = useMemo(() => {
+    return [...project].sort((a, b) => {
+      const aClient = hasTag(a, "client");
+      const bClient = hasTag(b, "client");
+      if (aClient !== bClient) return aClient ? -1 : 1;
+      return (a.id ?? 0) - (b.id ?? 0);
+    });
+  }, [project]);
 
   const filteredProjects =
     filter === "all"
-      ? project
-      : project.filter(
+      ? orderedProjects
+      : orderedProjects.filter(
           (proj) =>
-            proj.filterTags?.includes(filter) ||
+            hasTag(proj, filter) ||
             proj.categories?.toLowerCase().includes(filter.toLowerCase()),
         );
 
@@ -38,6 +53,12 @@ const Protfolio = () => {
             onClick={() => setFilter("all")}
           >
             All Projects
+          </button>
+          <button
+            className={`filter-btn ${filter === "client" ? "active" : ""}`}
+            onClick={() => setFilter("client")}
+          >
+            Client project
           </button>
           <button
             className={`filter-btn ${filter === "web" ? "active" : ""}`}

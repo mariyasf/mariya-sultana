@@ -160,5 +160,23 @@
         "github_link": "https://github.com/mariyasf/book-vibe",
         "categories": "Store in the Local Storage",
         "filterTags": ["web", "javascript"]
+    },
+    {
+        "id": 19,
+        "image": "img/emporium.png",
+        "live_link": "#",
+        "title": "Shayoni's Emporium, mPair Technologies Ltd.",
+        "github_link": "#",
+        "categories": "Client project, Full-stack eCommerce, Customer-facing site & admin panel, Browse & filter by category & cart & orders, Product & category hierarchy & inventory & order processing, Product variations & discounts & full checkout, Node.js, Express.js, Prisma, MongoDB, cPanel VPS",
+        "filterTags": ["web", "react", "javascript", "client"]
+    },
+    {
+        "id": 20,
+        "image": "images/g4.png",
+        "live_link": "#",
+        "title": "G4 International, mPair Technologies Ltd.",
+        "github_link": "#",
+        "categories": "Client project, POS (Point of Sale), Sales & inventory & daily operations, Product & stock & sales & invoices & customers, Product variations & discounts & real-time sales tracking, Node.js, Express.js, Prisma, MySQL, cPanel VPS",
+        "filterTags": ["web", "react", "javascript", "client"]
     }
 ]
