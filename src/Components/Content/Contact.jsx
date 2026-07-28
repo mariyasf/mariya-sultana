@@ -49,10 +49,12 @@ const Contact = () => {
                 <span className="contact-info__icon"><FaUser /></span>
                 <span>Mariya Sultana</span>
               </p>
-              <p className="contact-info__row">
-                <span className="contact-info__icon"><IoCall /></span>
-                <span>+880 1717638616</span>
-              </p>
+               {/*
+  <p className="contact-info__row">
+    <span className="contact-info__icon"><IoCall /></span>
+    <span>+880 1717638616</span>
+  </p>
+  */}
               <p className="contact-info__row">
                 <span className="contact-info__icon"><MdEmail /></span>
                 <span>mariasultanafahmida@gmail.com</span>
